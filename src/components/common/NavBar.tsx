@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { Box, Button, Flex } from '@chakra-ui/react';
 import { useCounterControl } from '../../hooks/useCounterControl';
@@ -41,7 +41,6 @@ export default function NavBar() {
           <Button onClick={handleCounter}>{counter}</Button>
         </Flex>
       </Box>
-      <Outlet />
     </>
   );
 }
