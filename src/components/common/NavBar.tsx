@@ -1,13 +1,11 @@
-import { useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { Box, Button, Flex } from '@chakra-ui/react';
 import { useCounterControl } from '../../hooks/useCounterControl';
 
 export default function NavBar() {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { counter, handleCounter } = useCounterControl();
   return (
     <>
-      <Box bg={useColorModeValue('gray.200', 'gray.600')} px={4}>
+      <Box bg={'gray.200'} px={4}>
         <Flex h={16} alignItems="center" justifyContent="center" gap={10}>
           <Button
             backgroundColor={'transparent'}
@@ -16,16 +14,10 @@ export default function NavBar() {
             <img src="/home.png" alt="home" height={30} width={30} />
           </Button>
           <Button
-            onClick={toggleColorMode}
             backgroundColor={'transparent'}
             _hover={{ backgroundColor: 'transparent' }}
           >
-            <img
-              src={colorMode === 'light' ? '/dark.png' : 'light.png'}
-              alt="theme"
-              height={30}
-              width={30}
-            />
+            <img src={'light.png'} alt="theme" height={30} width={30} />
           </Button>
           <Button
             backgroundColor={'transparent'}
