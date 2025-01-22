@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { Box, Button, Flex } from '@chakra-ui/react';
 import { useCounterControl } from '../../hooks/useCounterControl';
@@ -14,9 +13,7 @@ export default function NavBar() {
             backgroundColor={'transparent'}
             _hover={{ backgroundColor: 'transparent' }}
           >
-            <Link to="/">
-              <img src="/home.png" alt="home" height={30} width={30} />
-            </Link>
+            <img src="/home.png" alt="home" height={30} width={30} />
           </Button>
           <Button
             onClick={toggleColorMode}
@@ -34,9 +31,7 @@ export default function NavBar() {
             backgroundColor={'transparent'}
             _hover={{ backgroundColor: 'transparent' }}
           >
-            <Link to="/scores">
-              <img src="/score.png" alt="score" height={32} width={32} />
-            </Link>
+            <img src="/score.png" alt="score" height={32} width={32} />
           </Button>
           <Button onClick={handleCounter}>{counter}</Button>
         </Flex>
