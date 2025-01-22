@@ -1,7 +1,7 @@
+import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import typescript from '@rollup/plugin-typescript';
 
 export default {
   input: 'src/index.ts', // Entry file
@@ -9,13 +9,24 @@ export default {
     {
       file: 'dist/index.js',
       format: 'cjs',
-      exports: 'named',
+      sourcemap: true,
     },
     {
       file: 'dist/index.esm.js',
       format: 'esm',
-      exports: 'named',
+      sourcemap: true,
     },
   ],
-  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript()],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript({
+      tsconfig: './tsconfig.json',
+      declaration: true,
+      declarationDir: 'dist',
+      emitDeclarationOnly: true,
+    }),
+  ],
+  external: ['react', 'react-dom'], // Mark peer dependencies as external
 };
