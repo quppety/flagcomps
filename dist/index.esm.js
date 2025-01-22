@@ -1,5 +1,4 @@
 import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
-import { Link } from 'react-router-dom';
 import * as React from 'react';
 import React__default, { forwardRef as forwardRef$1, useContext, createContext as createContext$1, useRef, useMemo, useState, useCallback, isValidElement, cloneElement } from 'react';
 
@@ -7044,7 +7043,7 @@ var useCounterControl = function () {
 function NavBar() {
     var _a = useColorMode(), colorMode = _a.colorMode, toggleColorMode = _a.toggleColorMode;
     var _b = useCounterControl(), counter = _b.counter, handleCounter = _b.handleCounter;
-    return (jsx(Fragment, { children: jsx(Box, { bg: useColorModeValue('gray.200', 'gray.600'), px: 4, children: jsxs(Flex, { h: 16, alignItems: "center", justifyContent: "center", gap: 10, children: [jsx(Button, { backgroundColor: 'transparent', _hover: { backgroundColor: 'transparent' }, children: jsx(Link, { to: "/", children: jsx("img", { src: "/home.png", alt: "home", height: 30, width: 30 }) }) }), jsx(Button, { onClick: toggleColorMode, backgroundColor: 'transparent', _hover: { backgroundColor: 'transparent' }, children: jsx("img", { src: colorMode === 'light' ? '/dark.png' : 'light.png', alt: "theme", height: 30, width: 30 }) }), jsx(Button, { backgroundColor: 'transparent', _hover: { backgroundColor: 'transparent' }, children: jsx(Link, { to: "/scores", children: jsx("img", { src: "/score.png", alt: "score", height: 32, width: 32 }) }) }), jsx(Button, { onClick: handleCounter, children: counter })] }) }) }));
+    return (jsx(Fragment, { children: jsx(Box, { bg: useColorModeValue('gray.200', 'gray.600'), px: 4, children: jsxs(Flex, { h: 16, alignItems: "center", justifyContent: "center", gap: 10, children: [jsx(Button, { backgroundColor: 'transparent', _hover: { backgroundColor: 'transparent' }, children: jsx("img", { src: "/home.png", alt: "home", height: 30, width: 30 }) }), jsx(Button, { onClick: toggleColorMode, backgroundColor: 'transparent', _hover: { backgroundColor: 'transparent' }, children: jsx("img", { src: colorMode === 'light' ? '/dark.png' : 'light.png', alt: "theme", height: 30, width: 30 }) }), jsx(Button, { backgroundColor: 'transparent', _hover: { backgroundColor: 'transparent' }, children: jsx("img", { src: "/score.png", alt: "score", height: 32, width: 32 }) }), jsx(Button, { onClick: handleCounter, children: counter })] }) }) }));
 }
 
 export { NavBar };
