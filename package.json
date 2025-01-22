@@ -1,6 +1,6 @@
 {
   "name": "flags-nav-comp",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Reusable NavBar component for React applications.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -16,10 +16,6 @@
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
