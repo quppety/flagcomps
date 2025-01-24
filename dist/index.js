@@ -26,17 +26,12 @@ var Button = function (_a) {
         }, children: labelContent }));
 };
 
-var index = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    Button: Button
-});
-
 function NavBar() {
     var _a = react$1.useColorMode(), colorMode = _a.colorMode, toggleColorMode = _a.toggleColorMode;
     var _b = useCounterControl(), counter = _b.counter, handleCounter = _b.handleCounter;
     return (jsxRuntime.jsxs(jsxRuntime.Fragment, { children: [jsxRuntime.jsx(react$1.Box, { bg: react$1.useColorModeValue('gray.200', 'gray.600'), px: 4, children: jsxRuntime.jsxs(react$1.Flex, { h: 16, alignItems: "center", justifyContent: "center", gap: 10, children: [jsxRuntime.jsx(Button, { labelContent: jsxRuntime.jsx(reactRouterDom.Link, { to: "/", children: jsxRuntime.jsx("img", { src: "/home.png", alt: "home", height: 30, width: 30 }) }) }), jsxRuntime.jsx(Button, { onClick: toggleColorMode, labelContent: jsxRuntime.jsx("img", { src: colorMode === 'light' ? '/dark.png' : 'light.png', alt: "theme", height: 30, width: 30 }) }), jsxRuntime.jsx(Button, { labelContent: jsxRuntime.jsx(reactRouterDom.Link, { to: "/scores", children: jsxRuntime.jsx("img", { src: "/score.png", alt: "score", height: 32, width: 32 }) }) }), jsxRuntime.jsx(Button, { onClick: handleCounter, labelContent: counter })] }) }), jsxRuntime.jsx(reactRouterDom.Outlet, {})] }));
 }
 
-exports.Button = index;
+exports.Button = Button;
 exports.NavBar = NavBar;
 //# sourceMappingURL=index.js.map

@@ -24,16 +24,11 @@ var Button = function (_a) {
         }, children: labelContent }));
 };
 
-var index = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    Button: Button
-});
-
 function NavBar() {
     var _a = useColorMode(), colorMode = _a.colorMode, toggleColorMode = _a.toggleColorMode;
     var _b = useCounterControl(), counter = _b.counter, handleCounter = _b.handleCounter;
     return (jsxs(Fragment, { children: [jsx(Box, { bg: useColorModeValue('gray.200', 'gray.600'), px: 4, children: jsxs(Flex, { h: 16, alignItems: "center", justifyContent: "center", gap: 10, children: [jsx(Button, { labelContent: jsx(Link, { to: "/", children: jsx("img", { src: "/home.png", alt: "home", height: 30, width: 30 }) }) }), jsx(Button, { onClick: toggleColorMode, labelContent: jsx("img", { src: colorMode === 'light' ? '/dark.png' : 'light.png', alt: "theme", height: 30, width: 30 }) }), jsx(Button, { labelContent: jsx(Link, { to: "/scores", children: jsx("img", { src: "/score.png", alt: "score", height: 32, width: 32 }) }) }), jsx(Button, { onClick: handleCounter, labelContent: counter })] }) }), jsx(Outlet, {})] }));
 }
 
-export { index as Button, NavBar };
+export { Button, NavBar };
 //# sourceMappingURL=index.esm.js.map

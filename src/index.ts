@@ -1,2 +1,2 @@
 export { default as NavBar } from './components/common/NavBar';
-export * as Button from './components/common/Button';
+export * from './components/common/Button';
