@@ -1,31 +1,18 @@
 import { Link, Outlet } from 'react-router-dom';
-import { useColorMode } from '@chakra-ui/react';
+import { useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { useCounterControl } from '../../hooks/useCounterControl';
-import Button from './Button';
+import { Button } from './Button';
 
 export default function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { counter, handleCounter } = useCounterControl();
   return (
     <>
-      <div
-        style={{
-          backgroundColor: colorMode === 'light' ? '#E2E8F0' : '#4A5568',
-          paddingRight: '1rem',
-          paddingLeft: '1rem',
-        }}
-      >
-        <div
-          style={{
-            height: '4rem',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '2.5rem',
-          }}
-        >
+      <Box bg={useColorModeValue('gray.200', 'gray.600')} px={4}>
+        <Flex h={16} alignItems="center" justifyContent="center" gap={10}>
           <Button
-            content={
+            labelContent={
               <Link to="/">
                 <img src="/home.png" alt="home" height={30} width={30} />
               </Link>
@@ -33,7 +20,7 @@ export default function NavBar() {
           />
           <Button
             onClick={toggleColorMode}
-            content={
+            labelContent={
               <img
                 src={colorMode === 'light' ? '/dark.png' : 'light.png'}
                 alt="theme"
@@ -43,16 +30,15 @@ export default function NavBar() {
             }
           />
           <Button
-            content={
+            labelContent={
               <Link to="/scores">
                 <img src="/score.png" alt="score" height={32} width={32} />
               </Link>
             }
           />
-
-          <Button onClick={handleCounter} content={counter} />
-        </div>
-      </div>
+          <Button onClick={handleCounter} labelContent={counter} />
+        </Flex>
+      </Box>
       <Outlet />
     </>
   );

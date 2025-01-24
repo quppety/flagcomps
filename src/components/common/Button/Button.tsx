@@ -1,10 +1,6 @@
-const Button = ({
-  onClick,
-  content,
-}: {
-  onClick?: () => void;
-  content: JSX.Element | string | number;
-}) => {
+import { ButtonProps } from './Button.types';
+
+const Button = ({ onClick, labelContent }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -15,7 +11,7 @@ const Button = ({
         height: '2.5rem',
       }}
     >
-      {content}
+      {labelContent}
     </button>
   );
 };
