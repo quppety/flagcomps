@@ -1,5 +1,5 @@
 {
-  "name": "flags-nav-comp",
+  "name": "@quppety/flagcomps",
   "version": "1.0.4",
   "description": "Reusable NavBar component for React applications.",
   "main": "dist/index.js",
@@ -16,13 +16,10 @@
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.16.0"
-  },
-  "dependencies": {
+    "react-router-dom": "^6.16.0",
     "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "flags-nav-comp": "^1.0.0"
+    "@emotion/styled": "^11.11.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
@@ -42,9 +39,9 @@
     "vite": "^4.4.5"
   },
   "keywords": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/quppety/flagcomps.git"
+  "repository": "git://github.com/quppety/flagcomps.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "Alex Q",
   "license": "MIT"
